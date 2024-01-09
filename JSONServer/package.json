@@ -4,10 +4,10 @@
   "description": "Simple Fake API",
   "main": "main.js",
   "scripts": {
-    "start": "json-server --watch ./database.json",
+    "start": "../node_modules/.bin/json-server --watch ./database.json",
     "start-auth": "node server.js"
   },
-  "author": "ME:)",
+  "author": "Shon",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

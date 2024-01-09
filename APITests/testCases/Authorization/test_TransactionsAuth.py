@@ -8,18 +8,18 @@ transaction_id = 3
 def test_getTransactions(): # get Transactions test
     head = new_transaction_headers()
     list_transactions_response = list_transactions(head)
-    assert list_transactions_response.status_code == 200
+    assert list_transactions_response.status_code == 401
 
 def test_createTransaction(): # add Transaction test
     transaction_payload = new_transaction_payload()
     head = new_transaction_headers()
     create_transaction_response = create_transaction(transaction_payload, head)
-    assert create_transaction_response.status_code == 201
+    assert create_transaction_response.status_code == 401
 
 def test_getTransactionByID(): # get single Transaction by ID test
     head = new_transaction_headers()
     get_product_response = get_transaction(1, head)
-    assert get_product_response.status_code == 200
+    assert get_product_response.status_code == 401
 
 def test_updateTransaction(): # update Transaction test
     head = new_transaction_headers()
@@ -29,12 +29,12 @@ def test_updateTransaction(): # update Transaction test
         "productId": 4
     }
     update_transaction_response = update_transaction(transaction_id, new_payload, head)
-    assert update_transaction_response.status_code == 200
+    assert update_transaction_response.status_code == 401
 
 def test_deleteTransaction(): # delete Transaction test
     head = new_transaction_headers()
     delete_transaction_response = delete_transaction(transaction_id, head)
-    assert delete_transaction_response.status_code == 200
+    assert delete_transaction_response.status_code == 401
 
 def create_transaction(payload, headers):
     return requests.post(baseURL + "/transactions", json=payload, headers=headers)
@@ -69,5 +69,5 @@ def new_transaction_headers():
 
     return {
         'Accept': '*/*',
-        'Authorization': 'Bearer ' + token
+        'Authorization': 'Bearer '
     }

@@ -8,18 +8,18 @@ location_id = 3
 def test_getLocations(): # get Locations test
     head = new_location_headers()
     list_locations_response = list_locations(head)
-    assert list_locations_response.status_code == 200
+    assert list_locations_response.status_code == 401
 
 def test_createLocation(): # add Location test
     location_payload = new_location_payload()
     head = new_location_headers()
     create_location_response = create_location(location_payload, head)
-    assert create_location_response.status_code == 201
+    assert create_location_response.status_code == 401
 
 def test_getLocationByID(): # get single Location by ID test
     head = new_location_headers()
     get_product_response = get_location(1, head)
-    assert get_product_response.status_code == 200
+    assert get_product_response.status_code == 401
 
 def test_updateLocation(): # update Location test
     head = new_location_headers()
@@ -27,12 +27,12 @@ def test_updateLocation(): # update Location test
         "name": "New York"
     }
     update_location_response = update_location(location_id, new_payload, head)
-    assert update_location_response.status_code == 200
+    assert update_location_response.status_code == 401
 
 def test_deleteLocation(): # delete Location test
     head = new_location_headers()
     delete_location_response = delete_location(location_id, head)
-    assert delete_location_response.status_code == 200
+    assert delete_location_response.status_code == 401
 
 def create_location(payload, headers):
     return requests.post(baseURL + "/locations", json=payload, headers=headers)
@@ -63,5 +63,5 @@ def new_location_headers():
 
     return {
         'Accept': '*/*',
-        'Authorization': 'Bearer ' + token
+        'Authorization': 'Bearer '
     }

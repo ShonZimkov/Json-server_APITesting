@@ -1,6 +1,6 @@
 import requests
-from ..utilities.readProperties import ReadConfig
-from ..utilities.customLogin import customLogin
+from APITests.utilities.readProperties import ReadConfig
+from APITests.utilities.customLogin import customLogin
 
 
 baseURL = ReadConfig.getBaseURL()

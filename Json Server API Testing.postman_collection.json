@@ -1,0 +1,1753 @@
+{
+	"info": {
+		"_postman_id": "b64c66f7-f57b-424a-9b25-de1695f35c4f",
+		"name": "Json Server API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31863193"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Crud",
+					"item": [
+						{
+							"name": "getProducts",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 20,\r\n    \"name\": \"Product020\",\r\n    \"cost\": 100,\r\n    \"quantity\": 100,\r\n    \"locationId\": 5,\r\n    \"familyId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateProductByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Product020PUT\",\r\n    \"cost\": 100,\r\n    \"quantity\": 100,\r\n    \"locationId\": 5,\r\n    \"familyId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/products/20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products",
+										"20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteProductByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDY0MzkyMiwiZXhwIjoxNzA0NjQ3NTIyfQ.C3L0XWTOJ9xsvjHhD9r1d1czOqod8TdGq-fIr9A98fY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/products/18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products",
+										"18"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/products/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authorization",
+					"item": [
+						{
+							"name": "getProductNoToken",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/products/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductsNoToken",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addProductNoToken",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "      {\r\n      \"name\": \"dani\",\r\n      \"price\": 15,\r\n      \"quantity\": 80,\r\n      \"locationId\": 1,\r\n      \"familyId\": 2\r\n      }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateProductNoToken",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"danone Pro\",\r\n      \"price\": 11,\r\n      \"quantity\": 31,\r\n      \"locationId\": 1,\r\n      \"familyId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/products/20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products",
+										"20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteProductNoToken",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/products/20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products",
+										"20"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InvalidCredentials",
+					"item": [
+						{
+							"name": "addProductNoName",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDY0MzkyMiwiZXhwIjoxNzA0NjQ3NTIyfQ.C3L0XWTOJ9xsvjHhD9r1d1czOqod8TdGq-fIr9A98fY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"cost\": 10,\r\n      \"quantity\": 1000,\r\n      \"locationId\": 1,\r\n      \"familyId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addProductNoCost",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDcwMjQyOSwiZXhwIjoxNzA0NzA2MDI5fQ.8QqD7IOSBm0OR17kZKrn2EISbXnmL0i-hIGI92CKHwc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"danone pro\",\r\n      \"quantity\": 1000,\r\n      \"locationId\": 1,\r\n      \"familyId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addProductNoQuantity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"danone pro\",\r\n      \"cost\": 10,\r\n      \"locationId\": 1,\r\n      \"familyId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addProductNoLocationId",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDcwMjQyOSwiZXhwIjoxNzA0NzA2MDI5fQ.8QqD7IOSBm0OR17kZKrn2EISbXnmL0i-hIGI92CKHwc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"danone pro\",\r\n      \"cost\": 15,\r\n      \"quantity\": 999,\r\n      \"familyId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addProductNoFamilyId",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDcwMjQyOSwiZXhwIjoxNzA0NzA2MDI5fQ.8QqD7IOSBm0OR17kZKrn2EISbXnmL0i-hIGI92CKHwc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"danone pro\",\r\n      \"cost\": 15,\r\n      \"quantity\": 999,\r\n      \"locationId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Crud",
+					"item": [
+						{
+							"name": "getLocations",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/locations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getLocationByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/locations/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addLocation",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"id\": 5,\r\n      \"name\": \"Ramat-Gan\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/locations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateLocationByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"Tel Aviv\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/locations/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteLocationByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/locations/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authorization",
+					"item": [
+						{
+							"name": "getLocationNoToken",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/locations/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getLocationsNoToken",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/locations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addLocationNoToken",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "      {\r\n      \"name\": \"Israel\"\r\n      }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/locations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateLocationNoToken",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"New York\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/locations/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteLocationNoToken",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/locations/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InvalidCredentials",
+					"item": [
+						{
+							"name": "addLocationNoName",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDY0MzkyMiwiZXhwIjoxNzA0NjQ3NTIyfQ.C3L0XWTOJ9xsvjHhD9r1d1czOqod8TdGq-fIr9A98fY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/locations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"locations"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Families",
+			"item": [
+				{
+					"name": "Crud",
+					"item": [
+						{
+							"name": "getFamilies",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/families",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getFamilyByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/families/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateFamilyByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"Meats\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/families/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addFamily",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"id\": 4,\r\n      \"name\": \"Milks\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/families",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteFamilyByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/families/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InvalidCredentials",
+					"item": [
+						{
+							"name": "addFamilyNoName",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDY0MzkyMiwiZXhwIjoxNzA0NjQ3NTIyfQ.C3L0XWTOJ9xsvjHhD9r1d1czOqod8TdGq-fIr9A98fY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/families",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authorization",
+					"item": [
+						{
+							"name": "getFamilyNoToken",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/families/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getFamiliesNoToken",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/families",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addFamilyNoToken",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "      {\r\n      \"name\": \"Sweets\"\r\n      }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/families",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateFamilyNoToken",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Sours\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/families/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteFamilyNoToken",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/families/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"families",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Crud",
+					"item": [
+						{
+							"name": "getTransactions",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getTransactionByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/transactions/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateTransactionByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"cost\": 110,\r\n      \"quantity\": 1,\r\n      \"productId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/transactions/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addTransactionNoID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"cost\": 1000,\r\n      \"quantity\": 11,\r\n      \"productId\": 5\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteTransactionByID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDYxODUwNiwiZXhwIjoxNzA0NjIyMTA2fQ.F2K7Or0JlCZ4iSSkTM_4_YTtIPFjHypaLiPOOSzJMqs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/transactions/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authorization",
+					"item": [
+						{
+							"name": "getTransactionNoToken",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/transactions/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getTransactionNoToken",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addTransactionNoToken",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"cost\": 1000,\r\n      \"quantity\": 11,\r\n      \"productId\": 5\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateTransactionNoToken",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"cost\": 1000,\r\n      \"quantity\": 11,\r\n      \"productId\": 5\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/transactions/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteTransactionNoToken",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/transactions/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InvalidCredentials",
+					"item": [
+						{
+							"name": "addTransactionNoCost",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDY0MzkyMiwiZXhwIjoxNzA0NjQ3NTIyfQ.C3L0XWTOJ9xsvjHhD9r1d1czOqod8TdGq-fIr9A98fY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"quantity\": 11,\r\n      \"productId\": 5\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addTransactionNoQuantity",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDY0MzkyMiwiZXhwIjoxNzA0NjQ3NTIyfQ.C3L0XWTOJ9xsvjHhD9r1d1czOqod8TdGq-fIr9A98fY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"cost\": 1000,\r\n      \"productId\": 5\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addTransactionNoProductId",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNob25pa2k5NTFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJtYW1pa2kxMSIsImlhdCI6MTcwNDY0MzkyMiwiZXhwIjoxNzA0NjQ3NTIyfQ.C3L0XWTOJ9xsvjHhD9r1d1czOqod8TdGq-fIr9A98fY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"cost\": 1000,\r\n      \"quantity\": 11\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shoniki951@gmail.com\",\r\n    \"password\":\"mamiki11\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shoniki952@gmail.com\",\r\n    \"password\":\"mamiki11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginInvalidEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shon@gmail.com\",\r\n    \"password\":\"mamiki11\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginInvalidPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shoniki951@gmail.com\",\r\n    \"password\":\"wrongPass\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterExistingUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shoniki951@gmail.com\",\r\n    \"password\":\"mamiki11\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -8,18 +8,18 @@ family_id = 3
 def test_getFamilys(): # get Familys test
     head = new_family_headers()
     list_families_response = list_families(head)
-    assert list_families_response.status_code == 200
+    assert list_families_response.status_code == 401
 
 def test_createFamily(): # add Family test
     family_payload = new_family_payload()
     head = new_family_headers()
     create_family_response = create_family(family_payload, head)
-    assert create_family_response.status_code == 201
+    assert create_family_response.status_code == 401
 
 def test_getFamilyByID(): # get single Family by ID test
     head = new_family_headers()
     get_product_response = get_family(1, head)
-    assert get_product_response.status_code == 200
+    assert get_product_response.status_code == 401
 
 def test_updateFamily(): # update Family test
     head = new_family_headers()
@@ -27,12 +27,12 @@ def test_updateFamily(): # update Family test
         "name": "Sweets"
     }
     update_family_response = update_family(family_id, new_payload, head)
-    assert update_family_response.status_code == 200
+    assert update_family_response.status_code == 401
 
 def test_deleteFamily(): # delete Family test
     head = new_family_headers()
     delete_family_response = delete_family(family_id, head)
-    assert delete_family_response.status_code == 200
+    assert delete_family_response.status_code == 401
 
 def create_family(payload, headers):
     return requests.post(baseURL + "/families", json=payload, headers=headers)
@@ -63,5 +63,5 @@ def new_family_headers():
 
     return {
         'Accept': '*/*',
-        'Authorization': 'Bearer ' + token
+        'Authorization': 'Bearer '
     }

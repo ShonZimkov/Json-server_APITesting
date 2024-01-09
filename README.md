@@ -1,19 +1,37 @@
-# JSONServer + JWT Auth
+# JSONServer + JWT Auth + Pytest
 
 A Fake REST API using json-server with JWT authentication. 
 
-Implemented End-points: login,register
+Implemented End-points: login, register, products, locations, families, transactions
 
-## Install
+Written Test Cases with pytest framework such as: 
+
+All Crud Actions for products, store locations, product families(category), transactions
+
+Negative testing for Invalid Credentials
+
+Security Testing for Authorization
+
+Login and Registration Testing
+
+Used Postman and JMeter for manual and performance testing
+
+## Install Requirements
+```bash
+$ cd APITests
+$ pip install -r requirements.txt
+```
+## Install Nodes
 
 ```bash
+$ cd JSONServer
 $ npm install
 $ npm run start-auth
 ```
 
-Might need to run
-```
-npm audit fix
+## To Run All Tests
+```bash
+$ pytest -v testCases/
 ```
 
 ## How to login/register?
@@ -28,8 +46,8 @@ with the following data
 
 ```
 {
-  "email": "nilson@email.com",
-  "password":"nilson"
+  "email": "shoniki951@gmail.com",
+  "password":"shoniki951"
 }
 ```
 

@@ -1,9 +1,9 @@
 import requests
-from ..utilities.readProperties import ReadConfig
+from APITests.utilities.readProperties import ReadConfig
 import string
 import random
 
-def test_login():
+def test_login(): # test login function
     # Arrange
     email = ReadConfig.getEmail()
     password = ReadConfig.getPassword()
@@ -17,7 +17,7 @@ def test_login():
     response = requests.post(baseUrl + "/auth/login", json=login_data)
     assert response.status_code == 200
 
-def test_register():
+def test_register(): # test register function
     # Arrange
     email = ReadConfig.getEmail()
     password = ReadConfig.getPassword()

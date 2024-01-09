@@ -8,18 +8,18 @@ product_id = 48
 def test_getProducts(): # get Products test
     head = new_product_headers()
     list_products_response = list_products(head)
-    assert list_products_response.status_code == 200
+    assert list_products_response.status_code == 401
 
 def test_createProduct(): # add Product test
     product_payload = new_product_payload()
     head = new_product_headers()
     create_product_response = create_product(product_payload, head)
-    assert create_product_response.status_code == 201
+    assert create_product_response.status_code == 401
 
 def test_getProductByID(): # get single Product by ID test
     head = new_product_headers()
     get_product_response = get_product(1, head)
-    assert get_product_response.status_code == 200
+    assert get_product_response.status_code == 401
 
 def test_updateProduct(): # update Product test
     head = new_product_headers()
@@ -31,12 +31,12 @@ def test_updateProduct(): # update Product test
         "familyId": 2
     }
     update_product_response = update_product(product_id, new_payload, head)
-    assert update_product_response.status_code == 200
+    assert update_product_response.status_code == 401
 
 def test_deleteProduct(): # delete Product test
     head = new_product_headers()
     delete_product_response = delete_product(product_id, head)
-    assert delete_product_response.status_code == 200
+    assert delete_product_response.status_code == 401
 
 def create_product(payload, headers):
     return requests.post(baseURL + "/products", json=payload, headers=headers)
@@ -75,5 +75,5 @@ def new_product_headers():
 
     return {
         'Accept': '*/*',
-        'Authorization': 'Bearer ' + token
+        'Authorization': 'Bearer '
     }
